@@ -95,30 +95,6 @@ function TabLayoutNav() {
           ),
         }}
       />
-      <Tabs.Screen
-        name="(group)"
-        options={{
-          title: 'Grupo',
-          href: null,
-          headerShown: false,
-          tabBarStyle: { display: 'none' },
-          tabBarIcon: ({ color }) => (
-            <TabBarIcon name="people-outline" color={color} />
-          ),
-        }}
-      />
-      <Tabs.Screen
-        name="(details)/[id]"
-        options={{
-          title: 'Grupo',
-          href: null,
-          headerShown: false,
-          tabBarStyle: { display: 'none' },
-          tabBarIcon: ({ color }) => (
-            <TabBarIcon name="people-outline" color={color} />
-          ),
-        }}
-      />
     </Tabs>
   )
 }

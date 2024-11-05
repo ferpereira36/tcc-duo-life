@@ -1,14 +1,14 @@
 import React from 'react'
 import { Text, View } from 'react-native'
-import ChangeName from './services/ChangeName'
-import ChangeGroupName from './services/ChangeGroupName'
-import ChangeLastName from './services/ChangeLastName'
-import ChangePassword from './services/ChangePassword'
-import ChangeSalaries from './services/ChangeSalaries'
 import ButtonHelp from './services/ButtonHelp'
 import ButtonReport from './services/ButtonReport'
-import ButtonInfoGroup from './services/ButtonInfoGroup'
-import { MethodCalcGroup } from './components/MethodCalcGroup'
+import { InfoGroup } from './components/group/InfoGroup'
+import { MethodCalcGroup } from './components/group/MethodCalcGroup'
+import { ChangeGroupName } from './components/group/ChangeGroupName'
+import { ChangeGroupSalaries } from './components/group/ChangeGroupSalaries'
+import { ChangeName } from './components/user/ChangeName'
+import { ChangeLastName } from './components/user/ChangeLastName'
+import { ChangePassword } from './components/user/ChangePassword'
 
 const GridOptions = () => {
   return (
@@ -25,9 +25,9 @@ const GridOptions = () => {
         Configurações do grupo
       </Text>
       <View className="flex-row items-center gap-6 mt-4">
-        <ButtonInfoGroup />
+        <InfoGroup />
         <ChangeGroupName />
-        <ChangeSalaries />
+        <ChangeGroupSalaries />
         <MethodCalcGroup />
       </View>
       <Text className="text-grayApp font-GroteskRegular mt-12">

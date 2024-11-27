@@ -29,6 +29,23 @@ export const LimitedCards = ({ month }: { month: string }) => {
     }
   }
 
+  const handleConfirmRemove = (id: string) => {
+    Alert.alert(
+      'Confirmação',
+      'Você tem certeza que deseja realizar esta ação?',
+      [
+        {
+          text: 'Cancelar',
+          style: 'cancel',
+        },
+        {
+          text: 'Confirmar',
+          onPress: () => handleRemove(id),
+        },
+      ],
+    )
+  }
+
   useFocusEffect(
     useCallback(() => {
       const storageGroup = storageService.getItem<groupStorageProps>('group')
@@ -71,7 +88,10 @@ export const LimitedCards = ({ month }: { month: string }) => {
             contentContainerStyle={styles.listContent}
             renderItem={({ item }) => {
               return (
-                <Card data={item} onPressRemove={() => handleRemove(item.id)} />
+                <Card
+                  data={item}
+                  onPressRemove={() => handleConfirmRemove(item.id)}
+                />
               )
             }}
           />

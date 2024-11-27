@@ -50,9 +50,7 @@ export default function LoginScreen() {
               <TouchableOpacity
                 onPress={() => router.navigate('/registerScreen')}
               >
-                <Text className="text-graniteGray text-right">
-                  Criar uma conta
-                </Text>
+                <Text className="text-grayApp text-right">Criar uma conta</Text>
               </TouchableOpacity>
             </View>
             <ButtonViolet text="Entrar" onPress={() => signInUser()} />

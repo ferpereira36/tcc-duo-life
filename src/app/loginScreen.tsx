@@ -16,7 +16,7 @@ export default function LoginScreen() {
     if (!sucess) {
       Alert.alert('Credenciais inválidas!')
     } else {
-      console.log('Enviando para Unlock')
+      // console.log('Enviando para Unlock')
       router.navigate('/unlockScreen')
     }
   }

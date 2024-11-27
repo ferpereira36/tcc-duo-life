@@ -15,7 +15,7 @@ export async function GetSaveUserInformation() {
     } = await supabase.auth.getUser()
 
     if (error) {
-      console.log('Erro getUserId')
+      // console.log('Erro getUserId')
       await supabase.auth.signOut()
       router.replace('/loginScreen')
     } else {
@@ -36,7 +36,7 @@ export async function GetSaveUserInformation() {
       .single()
 
     if (error) {
-      console.log('Erro getNameUser')
+      // console.log('Erro getNameUser')
       await supabase.auth.signOut()
       router.replace('/loginScreen')
     } else {
@@ -55,7 +55,7 @@ export async function GetSaveUserInformation() {
       .single()
 
     if (error) {
-      console.log('Erro getLastNameUser')
+      // console.log('Erro getLastNameUser')
       await supabase.auth.signOut()
       router.replace('/loginScreen')
     } else {
@@ -74,7 +74,7 @@ export async function GetSaveUserInformation() {
       .single()
 
     if (error) {
-      console.log('Erro getGender')
+      // console.log('Erro getGender')
       await supabase.auth.signOut()
       router.replace('/loginScreen')
     } else {
@@ -89,7 +89,7 @@ export async function GetSaveUserInformation() {
   await getGender()
   const handleSave = async () => {
     if (id && name && lastName && gender) {
-      console.log('Retornou valores')
+      // console.log('Retornou valores')
       storage.set('user', JSON.stringify({ id, name, lastName, gender }))
       // return { id, name, lastName, gender }
     }

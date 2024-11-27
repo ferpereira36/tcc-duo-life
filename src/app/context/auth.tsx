@@ -16,11 +16,11 @@ export const AuthProvider = ({ children }: PropsWithChildren) => {
         data: { session },
       } = await supabase.auth.getSession()
       if (session) {
-        console.log('Sessao verdadeira, enviado para unlock')
+        // console.log('Sessao verdadeira, enviado para unlock')
         setSession(true)
         router.replace('/unlockScreen')
       } else {
-        console.log('volta!!!')
+        // console.log('volta!!!')
         storage.trim()
         storage.clearAll()
         setSession(false)

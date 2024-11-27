@@ -12,7 +12,7 @@ import { storageService } from '@/services/storage/storageService'
 export default function UnlockScreen() {
   useEffect(() => {
     const loadUser = async () => {
-      console.log('processando...')
+      // console.log('processando...')
       const {
         data: { session },
       } = await supabase.auth.getSession()

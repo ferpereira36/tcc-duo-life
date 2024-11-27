@@ -6,7 +6,7 @@ import { ModalCard } from '@/components/app/ui/ModalCard'
 import { storageService } from '@/services/storage/storageService'
 import { groupStorageProps } from '@/types/storage/group'
 
-const InviteGroupButton = () => {
+export const InviteGroupButton = () => {
   const [modalVisible, setModalVisible] = useState(false)
   const storageGroup = storageService.getItem<groupStorageProps>('group')
 
@@ -51,5 +51,3 @@ const InviteGroupButton = () => {
     </View>
   )
 }
-
-export default InviteGroupButton

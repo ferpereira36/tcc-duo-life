@@ -11,14 +11,12 @@ import { ExpensesProps } from '@/types/ExpensesProps'
 import { useState, useCallback } from 'react'
 import { useFocusEffect } from '@react-navigation/native'
 import { router } from 'expo-router'
-import { nameMonth } from '@/utils/month/nameMonth'
 import { storageService } from '@/services/storage/storageService'
 import { groupStorageProps } from '@/types/storage/group'
 import { removeExpense } from '@/utils/card/removeExpense'
 
-const LimitedCards = () => {
+export const LimitedCards = ({ month }: { month: string }) => {
   const [limitedData, setLimitedData] = useState<ExpensesProps[]>([])
-  const month = nameMonth[new Date().getMonth()]
 
   async function handleRemove(id: string) {
     try {
@@ -82,7 +80,6 @@ const LimitedCards = () => {
     </View>
   )
 }
-export default LimitedCards
 
 const styles = StyleSheet.create({
   list: {

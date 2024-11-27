@@ -3,16 +3,14 @@ import React, { useCallback, useState } from 'react'
 import { StyleSheet, View, Text } from 'react-native'
 import { LinearGradient } from 'expo-linear-gradient'
 import { useFocusEffect } from 'expo-router'
-import { nameMonth } from '@/utils/month/nameMonth'
 import { ExpensesProps } from '@/types/ExpensesProps'
 import { storageService } from '@/services/storage/storageService'
 import { groupStorageProps } from '@/types/storage/group'
 import { numberToBRL } from '@/utils/format/numberToBRL'
 
-const CreditCard = () => {
+export const CreditCard = ({ month }: { month: string }) => {
   const [groupName, setGroupName] = useState('')
   const [groupExpensesValue, setGroupExpensesValue] = useState('')
-  const month = nameMonth[new Date().getMonth()]
 
   const cardInfo = {
     number: '**** **** **** **** ' + new Date().getFullYear(),
@@ -103,8 +101,6 @@ const CreditCard = () => {
     </View>
   )
 }
-
-export default CreditCard
 
 const styles = StyleSheet.create({
   gradientCard: {

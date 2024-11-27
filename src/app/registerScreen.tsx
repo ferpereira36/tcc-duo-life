@@ -49,7 +49,7 @@ export default function RegisterScreen() {
     <SafeAreaIOS>
       <DismissKeyboard>
         <View className="h-full items-center justify-center w-full">
-          <Text className="text-grayApp text-2xl mb-12">Criar conta</Text>
+          <Text className="text-grayApp text-2xl mb-12">Criar uma conta</Text>
           <View className="gap-4 w-4/5 items-center">
             <TextInput
               className="w-full h-14 px-2 border-graniteGray border-2 rounded-md text-grayApp"
@@ -62,6 +62,14 @@ export default function RegisterScreen() {
             <TextInput
               className="w-full h-14 px-2 border-graniteGray border-2 rounded-md text-grayApp"
               placeholder="Sobrenome"
+              placeholderTextColor={'gray'}
+              autoCapitalize="none"
+              value={lastname}
+              onChangeText={(text) => setLastName(text)}
+            />
+            <TextInput
+              className="w-full h-14 px-2 border-graniteGray border-2 rounded-md text-grayApp"
+              placeholder="Gênero"
               placeholderTextColor={'gray'}
               autoCapitalize="none"
               value={lastname}

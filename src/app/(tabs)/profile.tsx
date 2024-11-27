@@ -22,7 +22,8 @@ export default function Profile() {
         router.replace('/loginScreen')
       }
     } catch (error) {
-      console.log('Problemas para desconectar', error)
+      // console.log('Problemas para desconectar', error)
+      Alert.alert('Tente novamente!')
     }
   }
 
